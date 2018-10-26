@@ -1,0 +1,23 @@
+{
+  "name": "node-express-server",
+  "version": "1.0.0",
+  "description": "Server to use for Docker image to show the swarm mode demo with a simple expressjs server",
+  "main": "server/server.js",
+  "scripts": {
+    "start":"node server/server.js",
+    "build:server1": "docker build --build-arg APP_SERVER=app-engine-1 -t dockermaker/sample-app-engine-1 .",
+    "build:server2": "docker build --build-arg APP_SERVER=app-engine-2 -t dockermaker/sample-app-engine-2 .",
+    "build:server3": "docker build --build-arg APP_SERVER=app-engine-3 -t dockermaker/sample-app-engine-3 .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "docker",
+    "swarm"
+  ],
+  "author": "Hari Mukkapati",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
