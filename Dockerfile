@@ -14,6 +14,4 @@ RUN adduser -D -g -S dockerranger && \
 
 USER dockerranger
 
-EXPOSE 3100
-
 CMD ["node", "server.js"]
